@@ -16,3 +16,16 @@ function parosDarab(szamtomb) {
     }
     return eredmeny;
 }
+function fuggvenyhivasPalindrom(fv) {
+    var szoveg = fv();
+    szoveg = szoveg.toLowerCase();
+    szoveg = szoveg.replaceAll(" ", "");
+    var eredmeny = true;
+    for (var i = 0; i < szoveg.length; i++) {
+        if (szoveg[i] != szoveg[szoveg.length - 1 - i]) {
+            eredmeny = false;
+            break;
+        }
+    }
+    return eredmeny;
+}

@@ -19,3 +19,20 @@ function parosDarab(szamtomb:number[]):number {
     }
     return eredmeny;
 }
+
+
+function fuggvenyhivasPalindrom(fv:()=> string):boolean{
+    var szoveg:string = fv();
+    szoveg = szoveg.toLowerCase();
+    szoveg = szoveg.replaceAll(" ", "");
+    
+    var eredmeny:boolean = true;
+
+        for ( var i:number = 0; i < szoveg.length; i++){
+            if(szoveg[i] != szoveg[szoveg.length -1 -i]){
+                eredmeny = false;
+                break;
+            }
+        }
+    return eredmeny;
+}
